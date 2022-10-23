@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Sidebar() {
   return (
     <div>
@@ -8,19 +10,20 @@ export default function Sidebar() {
         data-bs-target="#offcanvasWithBothOptions"
         aria-controls="offcanvasWithBothOptions"
       >
-        Enable both scrolling & backdrop
+        <i className="bi bi-arrow-right-square"></i>
       </button>
 
       <div
-        className="offcanvas offcanvas-start"
+        className="offcanvas offcanvas-start w-25"
         data-bs-scroll="true"
-        tabindex="-1"
+        tabIndex="-1"
+        aria-expanded="false"
         id="offcanvasWithBothOptions"
         aria-labelledby="offcanvasWithBothOptionsLabel"
       >
         <div className="offcanvas-header">
           <h5 className="offcanvas-title" id="offcanvasWithBothOptionsLabel">
-            Backdrop with scrolling
+            <i className="bi bi-list"></i> Menu
           </h5>
           <button
             type="button"
@@ -30,9 +33,12 @@ export default function Sidebar() {
           ></button>
         </div>
         <div className="offcanvas-body">
-          <p>
-            Try scrolling the rest of the page to see this option in action.
-          </p>
+          <div className="py-1 mt-1">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><Link href={'/'}><a className="text-decoration-none">Home</a></Link></li>
+              <li class="list-group-item"><Link href={'/transaksi'}><a className="text-decoration-none">Transaksi</a></Link></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
