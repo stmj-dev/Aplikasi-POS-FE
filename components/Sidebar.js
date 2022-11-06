@@ -14,7 +14,7 @@ export default function Sidebar() {
       </button>
 
       <div
-        className="offcanvas offcanvas-start w-25"
+        className="offcanvas offcanvas-start"
         data-bs-scroll="true"
         tabIndex="-1"
         aria-expanded="false"
@@ -34,9 +34,9 @@ export default function Sidebar() {
         </div>
         <div className="offcanvas-body">
           <div className="py-1 mt-1">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item"><Link href={'/'}><a className="text-decoration-none">Home</a></Link></li>
-              <li class="list-group-item"><Link href={'/transaksi'}><a className="text-decoration-none">Transaksi</a></Link></li>
+            <ul className="list-group list-group-flush">
+              <li className="list-group-item"><Link href={'/'}><a className="text-decoration-none">Home</a></Link></li>
+              <li className="list-group-item"><Link href={'/transaksi'}><a className="text-decoration-none">Transaksi</a></Link></li>
             </ul>
           </div>
         </div>
